@@ -97,7 +97,7 @@ lib/
 ### Instalasi & Menjalankan Aplikasi
 1. **Clone repositori**:
    ```bash
-   git clone https://github.com/<username>/wastehub.git
+   git clone https://github.com/JonathanA-P/wastehub.git
    cd wastehub
    ```
 
