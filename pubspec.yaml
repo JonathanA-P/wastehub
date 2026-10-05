@@ -1,5 +1,5 @@
 name: wastehub
-description: "A new Flutter project."
+description: "Platform Bursa Pertukaran Komoditas Daur Ulang & Manajemen Rantai Pasok Sirkular B2B."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev

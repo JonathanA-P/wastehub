@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'core/theme/app_theme.dart';
 import 'features/catalog/screens/catalog_screen.dart';
 
-
 void main() {
   runApp(const WasteHubApp());
 }

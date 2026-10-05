@@ -240,27 +240,31 @@ class _CatalogScreenState extends State<CatalogScreen> {
       bottomNavigationBar: WasteHubBottomNav(
         currentIndex: _currentNavIndex,
         onTap: (index) {
-          setState(() {
-            _currentNavIndex = index;
-          });
+          if (index == 0) return;
           if (index == 1) {
             Navigator.push(
               context,
               MaterialPageRoute(
                   builder: (_) => const TransactionListScreen()),
-            );
+            ).then((_) {
+              if (mounted) setState(() => _currentNavIndex = 0);
+            });
           } else if (index == 2) {
             Navigator.push(
               context,
               MaterialPageRoute(builder: (_) => const NegotiationInboxScreen()),
-            );
+            ).then((_) {
+              if (mounted) setState(() => _currentNavIndex = 0);
+            });
           } else if (index == 3) {
             Navigator.push(
               context,
               MaterialPageRoute(
                 builder: (_) => const BusinessDashboardScreen(),
               ),
-            );
+            ).then((_) {
+              if (mounted) setState(() => _currentNavIndex = 0);
+            });
           }
         },
       ),

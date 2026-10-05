@@ -54,10 +54,14 @@ class _BusinessDashboardScreenState extends State<BusinessDashboardScreen> {
         currentIndex: _currentNavIndex,
         onTap: (index) {
           if (index == 0) {
-            Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(builder: (_) => const CatalogScreen()),
-            );
+            if (Navigator.canPop(context)) {
+              Navigator.pop(context);
+            } else {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (_) => const CatalogScreen()),
+              );
+            }
           } else if (index == 1) {
             Navigator.pushReplacement(
               context,
